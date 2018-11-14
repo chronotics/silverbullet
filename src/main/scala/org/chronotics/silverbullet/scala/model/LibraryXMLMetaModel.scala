@@ -1,4 +1,4 @@
-package org.chronotics.silverbullet.scala.akka.model
+package org.chronotics.silverbullet.scala.model
 
 import com.lucidchart.open.xtract.{ XmlReader, __ }
 import com.lucidchart.open.xtract.XmlReader._

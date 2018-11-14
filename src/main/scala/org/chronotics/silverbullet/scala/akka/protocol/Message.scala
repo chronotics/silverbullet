@@ -1,7 +1,7 @@
 package org.chronotics.silverbullet.scala.akka.protocol
 
 import akka.actor.ActorRef
-import org.chronotics.silverbullet.scala.akka.model._
+import org.chronotics.silverbullet.scala.model._
 import org.chronotics.silverbullet.scala.akka.state.{ActorState, Working}
 import org.chronotics.silverbullet.scala.akka.util.EnvConfig
 

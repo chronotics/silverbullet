@@ -12,7 +12,7 @@ import org.chronotics.silverbullet.scala.akka.util.EnvConfig
 
 class LangEngineOutputListener(strCallback: String, strUserId: String, strRequestId: String, strWorkflowId: String, strTaskId: String, strLibId: String,
                                kafkaProducer: KafkaProducer[Array[Byte], String]) extends OutputStream {
-  val log = LoggerFactory.getLogger(getClass());
+  val log = LoggerFactory.getLogger(getClass())
   val config = ConfigFactory.parseFile(EnvConfig.getConfigFile("z2_conn")).resolve()
   val topic = config.getString("kafka.topic")
   val redisHost = config.getString("redis.host")

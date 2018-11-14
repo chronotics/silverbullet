@@ -1,4 +1,4 @@
-package org.chronotics.silverbullet.scala.akka.model
+package org.chronotics.silverbullet.scala.model
 
 import scala.collection.immutable.HashMap
 

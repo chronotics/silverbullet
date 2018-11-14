@@ -1,4 +1,4 @@
-package org.chronotics.silverbullet.scala.akka.model
+package org.chronotics.silverbullet.scala.model
 
 case class TaskParam(var iId: Int, var strName: String, var strDesc: String, var intParent: Int,
                      var strDataType: String, var dMinValue: String, var dMaxValue: String, var dDefaultValue: String,
