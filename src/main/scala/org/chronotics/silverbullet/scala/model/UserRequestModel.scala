@@ -7,8 +7,8 @@ case class DebugRequestEntity(debugId: Int, debugType: String)
 
 case class UserRequest(strCallback: String, iUserId: Int, iWorkFlowId: Int, iRequestId: Int, iParentTaskId: Int, iParentWorkflow: Int,
                        var mapLibParam: HashMap[Int, Seq[LibParam]],
-                       seqConnection: Seq[TaskParam], seqNextConnection: Seq[TaskParam],
-                       strActorRefPath: String, intTaskId: Int = 0, bIsStepByStep: Boolean = false, intSimulation: Int = 0, intWorkflowEntity: Int = 0, runInternal: Boolean = false) {
+                       seqConnection: Seq[TaskConnection], seqNextConnection: Seq[TaskConnection],
+                       strActorRefPath: String, intTaskId: Int = 0,  bIsStepByStep: Boolean = false, intSimulation: Int = 0, intWorkflowEntity: Int = 0, runInternal: Boolean = false) {
   override def equals(obj: Any): Boolean = obj match {
     case obj: UserRequest => obj.canEqual(this) && obj.hashCode == this.hashCode
     case _ => false

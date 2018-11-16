@@ -8,6 +8,16 @@ import org.chronotics.silverbullet.scala.akka.util.EnvConfig
 import scala.collection.immutable.HashMap
 
 object Message {
+  //Akka System
+  case class InitAkkaSystem(cmd: String, id: String)
+  case class AkkaProcessInfo(result: String)
+  case class HealthCheck(intId: Int)
+  case class AkkaProcessResponse(response: AkkaProcessInfo)
+  case class GetRequest(userId: Int, workFlowId: Int, requestId: Int, userRequestEntity: UserRequestEntity, taskId: Int, bIsStepByStep: Boolean, intSimuation: Int, runInternal: Boolean = false)
+  case class GetCancelRequest(requestId: Int, workFlowId: Int, userId: Int, path: String)
+
+  case class UpdateLibraryMetaData(alibId: Int)
+
   //Ask workflow path from Router
   case class AskWorkFlowPath(userId: Int = 0, workFlowId: Int, strIdentifyId: String = "", intSimulation: Int = 0)
   //Send Workflow Message to Workflow Actor to execute
