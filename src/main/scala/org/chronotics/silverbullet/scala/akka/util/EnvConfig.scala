@@ -1,6 +1,7 @@
 package org.chronotics.silverbullet.scala.akka.util
 
 import java.io.File
+import java.nio.file.Paths
 import java.util.Calendar
 
 import com.typesafe.config.ConfigFactory
@@ -33,7 +34,7 @@ object EnvConfig {
       strConfigDir = System.getProperty("user.home")
 
       if (strConfigDir == null || strConfigDir.isEmpty()) {
-        strConfigDir = "/opt/ide/workspace/z2/z2.akka/src/main"
+        strConfigDir = "/opt/ide/workspace/chronotics/chron-app-config"
       } else {
         strConfigDir = strConfigDir + "/openDAP"
       }
@@ -53,7 +54,7 @@ object EnvConfig {
   }
 
   def getConfigFile(fileConfig: String, lang: String = "scala"): File = {
-    var config_file = getCurrentHomeDir() + "/resources/" + lang + "/" + fileConfig + EnvConfig.getRuntimeMode() + ".conf"
+    var config_file = Paths.get(getCurrentHomeDir(), "resources", lang, fileConfig + EnvConfig.getRuntimeMode() + ".conf").toString
 
     new File(config_file)
   }
